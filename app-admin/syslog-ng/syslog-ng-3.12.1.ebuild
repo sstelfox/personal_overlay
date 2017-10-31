@@ -70,9 +70,7 @@ src_configure() {
 		--disable-java \
 		--disable-docs \
 		--enable-manpages \
-		--with-embedded-crypto \
 		--with-ivykis=internal \
-		--with-libmongo-client=internal \
 		--sysconfdir=/etc/syslog-ng \
 		--localstatedir=/var/lib/syslog-ng \
 		--with-pidfile-dir=/var/run \
@@ -83,7 +81,9 @@ src_configure() {
 		$(use_enable geoip) \
 		$(use_enable ipv6) \
 		$(use_enable json) \
+		$(usex json --with-jsonc=system --with-jsonc=no) \
 		$(use_enable mongodb) \
+		$(usex mongodb --with-mongo-c=internal --with-mongo-c=no) \
 		$(use_enable pacct) \
 		$(use_enable python) \
 		$(use_enable redis) \
