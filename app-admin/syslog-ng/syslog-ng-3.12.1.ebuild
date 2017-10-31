@@ -125,13 +125,13 @@ src_install() {
 
 pkg_postinst() {
 	elog "For detailed documentation please see the upstream website:"
-	elog "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.7-guides/en/syslog-ng-ose-v3.7-guide-admin/html/index.html"
+	elog "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.12-guides/en/syslog-ng-ose-v3.12-guide-admin/html/index.html"
 
 	# bug #355257
 	if ! has_version app-admin/logrotate ; then
 		echo
 		elog "It is highly recommended that app-admin/logrotate be emerged to"
-		elog "manage the log files.  ${PN} installs a file in /etc/logrotate.d"
+		elog "manage the log files. ${PN} installs a file in /etc/logrotate.d"
 		elog "for logrotate to use."
 		echo
 	fi
