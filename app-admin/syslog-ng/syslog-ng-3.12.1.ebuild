@@ -21,18 +21,19 @@ RESTRICT="test"
 RDEPEND="
 	caps? ( sys-libs/libcap )
 	dbi? ( >=dev-db/libdbi-0.8.3 )
+	>=dev-libs/glib-2.10.1:2
+	dev-libs/libpcre
+	!dev-libs/eventlog
 	geoip? ( >=dev-libs/geoip-1.5.0 )
 	json? ( >=dev-libs/json-c-0.9 )
+	libressl? ( dev-libs/libressl:0= )
+	!libressl? ( dev-libs/openssl:0= )
 	python? ( ${PYTHON_DEPS} )
 	redis? ( dev-libs/hiredis )
 	smtp? ( net-libs/libesmtp )
 	spoof-source? ( net-libs/libnet:1.1 )
 	systemd? ( sys-apps/systemd )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	dev-libs/libpcre
-	!libressl? ( dev-libs/openssl:0= )
-	libressl? ( dev-libs/libressl:0= )
-	>=dev-libs/glib-2.10.1:2"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/flex"
