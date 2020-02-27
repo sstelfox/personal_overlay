@@ -83,7 +83,6 @@ src_configure() {
 		${CHRONY_EDITLINE}
 		${EXTRA_ECONF}
 		--chronysockdir="${EPREFIX}/run/chrony"
-		--disable-sechash
 		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 		--mandir="${EPREFIX}/usr/share/man"
 		--prefix="${EPREFIX}/usr"
